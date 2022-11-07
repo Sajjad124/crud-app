@@ -1,0 +1,12 @@
+.table {
+  width: 100%;
+  background-color: transparent;
+}
+.action-button {
+  display: flex;
+  margin: auto;
+}
+.action-button Button {
+  background-color: transparent;
+  padding: 10px;
+}
