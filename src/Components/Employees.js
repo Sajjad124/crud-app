@@ -6,7 +6,7 @@
 //   )
 // }
 
-// export default Employees
+//
 
 const Employees = [
   {
@@ -30,3 +30,5 @@ const Employees = [
     age: "22",
   },
 ];
+
+export default Employees;
