@@ -3,19 +3,21 @@ import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Employees from "./Employees";
-import {Link,useNavigate} from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 import "./Home.css";
 
 const Home = () => {
-    let History = useNavigate();
+  let History = useNavigate();
 
-    const handleDelete=(id)=>{
-        var index = Employees.map(function(e){
-            return e.id
-        }).indexOf(id);
-        Employees.splice(index,1);
-        History('/');
-    }
+  const handleDelete = (id) => {
+    var index = Employees.map(function (e) {
+      return e.id;
+    }).indexOf(id);
+    Employees.splice(index, 1);
+    History("/");
+  };
+
+  const handleEdit = (id) => {};
   return (
     <div style={{ margin: "10rem" }}>
       <Table
@@ -27,8 +29,15 @@ const Home = () => {
             <td>
               <h4>Employees Table</h4>
             </td>
-            <td></td>
-            <td></td>
+            <td>
+              <input
+                style={{ padding: "5px", borderRadius: "10px" }}
+                placeholder="add new entry"
+              />
+            </td>
+            <td>
+              <Button>Add entry</Button>
+            </td>
           </tr>
           <tr>
             <th>Name</th>
@@ -43,11 +52,16 @@ const Home = () => {
                   <tr>
                     <td style={{ width: "100%" }}>{item.name}</td>
                     <td style={{ width: "100%" }}>{item.age}</td>
+
                     <td className="action-button">
-                      <Button onClick={() => handleDelete(item.id)}>Delete</Button>
+                      <Link to={"/"}>
+                        <Button onClick={() => handleEdit(item.id)}>
+                          Edit
+                        </Button>
+                      </Link>
                       &nbsp;
                       <Button onClick={() => handleDelete(item.id)}>
-                        Update
+                        Delete
                       </Button>
                     </td>
                   </tr>
