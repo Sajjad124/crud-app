@@ -36,7 +36,7 @@ const Home = () => {
           {Employees && Employees.length > 0
             ? Employees.map((item) => {
                 return (
-                  <tr>
+                  <tr key={item}>
                     <td style={{ width: "100%", color: "black" }}>
                       {item.name}
                     </td>
