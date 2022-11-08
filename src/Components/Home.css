@@ -1,12 +1,41 @@
 .table {
   width: 100%;
-  background-color: transparent;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
+}
+.table:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border: 1px solid black;
 }
 .action-button {
   display: flex;
   margin: auto;
+  color: black;
+  padding: 10px;
 }
 .action-button Button {
   background-color: transparent;
+  padding: 10px;
+  color: black;
+}
+td {
+  color: rgb(0, 0, 0);
+}
+.createbtn {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-weight: bold;
+}
+.createbtn:hover {
+  background-color: black;
+}
+.head {
+  width: 100%;
+  background-color: black;
+  color: white;
   padding: 10px;
 }

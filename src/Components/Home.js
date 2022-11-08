@@ -20,17 +20,12 @@ const Home = () => {
   const handleEdit = (id) => {};
   return (
     <div style={{ margin: "10rem" }}>
+      <h3 className="head">Table</h3>
       <Table
         style={{ width: "100%" }}
-        className="table table-striped table-dark table-hover table-responsive table-sm"
+        className="table table-striped  table-hover table-responsive table-sm"
       >
-        <thead className="thead-dark">
-          <tr>
-            <td>
-              <h4>Employees Table</h4>
-            </td>
-            
-          </tr>
+        <thead className="">
           <tr>
             <th>Name</th>
             <th>Age</th>
@@ -42,8 +37,12 @@ const Home = () => {
             ? Employees.map((item) => {
                 return (
                   <tr>
-                    <td style={{ width: "100%" }}>{item.name}</td>
-                    <td style={{ width: "100%" }}>{item.age}</td>
+                    <td style={{ width: "100%", color: "black" }}>
+                      {item.name}
+                    </td>
+                    <td style={{ width: "100%", color: "black" }}>
+                      {item.age}
+                    </td>
 
                     <td className="action-button">
                       <Link to={"/"}>
@@ -62,6 +61,10 @@ const Home = () => {
             : "No Data found"}
         </tbody>
       </Table>
+      <br></br>
+      <Link to="/create">
+        <Button className="createbtn">Create</Button>
+      </Link>
     </div>
   );
 };
