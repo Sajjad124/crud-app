@@ -19,13 +19,13 @@ const Home = () => {
 
   const handleEdit = (id) => {};
   return (
-    <div style={{ margin: "10rem" }}>
-      <h3 className="head">Table</h3>
+    <div className="main-div">
+      <h3 className="head">Employees Table</h3>
       <Table
         style={{ width: "100%" }}
         className="table table-striped  table-hover table-responsive table-sm"
       >
-        <thead className="">
+        <thead className="thead">
           <tr>
             <th>Name</th>
             <th>Age</th>
@@ -45,7 +45,7 @@ const Home = () => {
                     </td>
 
                     <td className="action-button">
-                      <Link to={"/"}>
+                      <Link className="d-grid gap-2" to={"/"}>
                         <Button onClick={() => handleEdit(item.id)}>
                           Edit
                         </Button>

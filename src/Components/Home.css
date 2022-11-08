@@ -1,3 +1,7 @@
+.main-div {
+  padding: 20px;
+  background-color: rgb(171, 176, 176);
+}
 .table {
   width: 100%;
   background-color: rgb(255, 255, 255);
@@ -13,12 +17,18 @@
   display: flex;
   margin: auto;
   color: black;
-  padding: 10px;
+  margin-left: 10px;
 }
 .action-button Button {
   background-color: transparent;
   padding: 10px;
   color: black;
+  border: 1px solid black;
+}
+.action-button Button:hover {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: 1px solid black;
 }
 td {
   color: rgb(0, 0, 0);
@@ -32,8 +42,15 @@ td {
 }
 .createbtn:hover {
   background-color: black;
+  border: 1px solid black;
 }
 .head {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+.thead {
   width: 100%;
   background-color: black;
   color: white;
