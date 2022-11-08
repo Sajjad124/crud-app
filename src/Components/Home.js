@@ -29,15 +29,7 @@ const Home = () => {
             <td>
               <h4>Employees Table</h4>
             </td>
-            <td>
-              <input
-                style={{ padding: "5px", borderRadius: "10px" }}
-                placeholder="add new entry"
-              />
-            </td>
-            <td>
-              <Button>Add entry</Button>
-            </td>
+            
           </tr>
           <tr>
             <th>Name</th>
