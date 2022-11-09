@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Employees from "./Employees";
 import { v4 as uuid } from "uuid";
 import { Link, useNavigate } from "react-router-dom";
+import "./Create.css";
 
 const Create = () => {
   const [name, setName] = useState("");
@@ -22,7 +23,7 @@ const Create = () => {
   };
   return (
     <div>
-      <form>
+      <form className="create-form">
         <input
           type="text"
           placeholder="Enter name"

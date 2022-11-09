@@ -1,0 +1,8 @@
+.create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  box-shadow: 5px 5px 25px -5px rgba(0, 0, 0, 0.5);
+}
