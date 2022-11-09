@@ -22,8 +22,9 @@ const Create = () => {
     history("/");
   };
   return (
-    <div>
+    <div className="div">
       <form className="create-form">
+        <h4>Create Employee Form</h4>
         <input
           type="text"
           placeholder="Enter name"
@@ -36,9 +37,9 @@ const Create = () => {
           required
           onChange={(e) => setAge(e.target.value)}
         />
-        <Button type="submit" onSubmit={(e) => handleSubmit(e)}>
+        <button type="submit" onSubmit={(e) => handleSubmit(e)}>
           Submit
-        </Button>
+        </button>
       </form>
     </div>
   );
