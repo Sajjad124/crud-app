@@ -18,7 +18,7 @@ const Create = () => {
     let uniqueId = id.slice(0, 8);
     let a = name;
     let b = age;
-    Employees.push({ id: uniqueId, Name: a, Age: b });
+    Employees.push({ id: uniqueId, name: a, age: b });
     history("/");
   };
   return (
@@ -37,7 +37,7 @@ const Create = () => {
           required
           onChange={(e) => setAge(e.target.value)}
         />
-        <button type="submit" onSubmit={(e) => handleSubmit(e)}>
+        <button type="submit" onClick={(e) => handleSubmit(e)}>
           Submit
         </button>
       </form>
