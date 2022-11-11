@@ -7,9 +7,49 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Create.css";
 
 const Edit = () => {
-  return (
-    <div>Edit</div>
-  )
-}
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [id, setId] = useState("");
 
-export default Edit
+  let history = useNavigate();
+
+  var index = Employees.map(function (e) {
+    return e.id;
+  }).indexOf(id);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let a = Employees[index];
+    a.name = name;
+    a.age = age;
+    // property = local name in useState
+    history("/");
+  };
+
+  return (
+    <div className="div">
+      <form className="create-form">
+        <h4>Edit Employee Form</h4>
+        <input
+          type="text"
+          placeholder="Enter name"
+          value={name}
+          required
+          onChange={(e) => setName(e.target.value)}
+        />
+        <input
+          type="text"
+          placeholder="Enter Age"
+          value={age}
+          required
+          onChange={(e) => setAge(e.target.value)}
+        />
+        <button type="submit" onClick={(e) => handleSubmit(e)}>
+          Update
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default Edit;
