@@ -19,12 +19,18 @@ const Edit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("clicked update");
     let a = Employees[index];
     a.name = name;
     a.age = age;
     // property = local name in useState
     history("/");
   };
+  useEffect(() => {
+    setName(localStorage.getItem("name"));
+    setAge(localStorage.getItem("age"));
+    setId(localStorage.getItem("Id"));
+  }, []);
 
   return (
     <div className="div">

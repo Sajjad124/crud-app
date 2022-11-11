@@ -17,7 +17,11 @@ const Home = () => {
     History("/");
   };
 
-  const handleEdit = (id) => {};
+  const handleEdit = (id, name, age) => {
+    localStorage.setItem("name", name);
+    localStorage.setItem("age", age);
+    localStorage.setItem("id", id);
+  };
   return (
     <div className="main-div">
       <h3 className="head">Employees Table</h3>
@@ -45,8 +49,12 @@ const Home = () => {
                     </td>
 
                     <td className="action-button">
-                      <Link className="d-grid gap-2" to={"/"}>
-                        <Button onClick={() => handleEdit(item.id)}>
+                      <Link className="d-grid gap-2" to={"/Edit"}>
+                        <Button
+                          onClick={() =>
+                            handleEdit(item.id, item.name, item.age)
+                          }
+                        >
                           Edit
                         </Button>
                       </Link>

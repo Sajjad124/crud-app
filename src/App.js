@@ -2,8 +2,8 @@ import logo from "./logo.svg";
 import "./App.css";
 import Home from "./Components/Home";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Add from "./Components/Edit";
 import Create from "./Components/Create";
+import Edit from "./Components/Edit";
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/Edit" element={<Edit />} />
         </Routes>
       </Router>
     </div>
