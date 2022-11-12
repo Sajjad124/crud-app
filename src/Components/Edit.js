@@ -5,6 +5,7 @@ import Employees from "./Employees";
 import { v4 as uuid } from "uuid";
 import { Link, useNavigate } from "react-router-dom";
 import "./Create.css";
+import Home from "./Home";
 
 const Edit = () => {
   const [name, setName] = useState("");
